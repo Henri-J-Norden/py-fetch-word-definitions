@@ -1,0 +1,2 @@
+python dict.py
+@pause

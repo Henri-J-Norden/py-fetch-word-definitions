@@ -1,0 +1,25 @@
+# This is a comment that will not be seen in the output file
+## This is a comment that WILL be in the output file 
+	# Visible comments retain their location - they will be after any words before the comment & before any words after the comment)
+
+
+# A single word (or phrase if supported by the API) is allowed per line:
+#	Words are processed in order and their order is retained in the output file
+# 	Additionally, any whitespace is ignored
+
+# Example:
+## - Bodily fluids -
+sanguine
+    choleric
+		bilious
+
+phlegmatic
+## -----------------
+
+
+
+# Words can be prefixed with _ to 'dismiss' them and move them to the end of the output file, for example:
+_desiccate
+ephemeral
+
+# In this example 'desiccate' will appear after 'ephemeral' in the 'dismissed words' section of the output file

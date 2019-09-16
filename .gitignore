@@ -1,0 +1,4 @@
+.words.db
+out_words.txt
+oxford_dicts_config.py
+__pycache__
