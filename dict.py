@@ -31,18 +31,19 @@ def process_words(word_db, in_file, out_file):
                     continue # ignore the rest of this line
 
                 else: # regular word
-                    print_word(o, word_db.get(w))
+                    print_word(o, word_db, w)
                     
             if len(dismissed_words) != 0: o.write("\n {} \n\n".format("#"*10 + " DISMISSED WORDS " + "#"*10))
             for w in dismissed_words:
-                print_word(o, word_db.get(w))
+                print_word(o, word_db, w)
 
 
 # output formatting
-def print_word(o_stream, data):
+def print_word(o_stream, word_db, word):
+    data = word_db.get(word)
     for r in data.get("results", []):
         s = r["id"].capitalize() + "\n"
-        s += "https://www.lexico.com/en/definition/{}\n".format(r["id"])
+        s += "https://www.lexico.com/{}/definition/{}\n".format(word_db.c.language, r["id"])
         for le in r["lexicalEntries"]:
             s += "{}: {}\n".format(
                 le.get("lexicalCategory", {}).get("text", ""),
