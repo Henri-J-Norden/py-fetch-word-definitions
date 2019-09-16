@@ -2,6 +2,11 @@
 ## This is a comment that WILL be in the output file 
 	# Visible comments retain their location - they will be after any words before the comment & before any words after the comment)
 
+#( 
+    This defines a comment block that is not visible in the output file
+    Comment blocks can be, for example, used to hide a large group of words you already know
+)#
+
 
 # A single word (or phrase if supported by the API) is allowed per line:
 #	Words are processed in order and their order is retained in the output file
